@@ -1,0 +1,22 @@
+.animate-form{
+    box-shadow: 1px 1px 15px black,-1px -1px 15px white;
+    animation: glow 5s linear infinite alternate-reverse;
+}
+
+@keyframes glow {
+    0%{
+        box-shadow: 1px 1px 15px black,-1px -1px 15px white;
+    }
+    25%{
+        box-shadow: 1px 1px 15px grey,-1px -1px 15px palevioletred;
+    }
+    50%{
+        box-shadow: 1px 1px 15px rgba(255, 0, 0, 0.525),-1px -1px 15px rgba(255, 0, 0, 0.305);
+    }
+    75%{
+        box-shadow: 1px 1px 15px palevioletred,-1px -1px 15px grey;
+    }
+    100%{
+        box-shadow: 1px 1px 15px white,-1px -1px 15px black;
+    }
+}

@@ -1,0 +1,14 @@
+.text-animate{
+    animation: fade 2s linear ;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+        top: 20px;
+    }
+    to{
+        opacity: 1;
+        top: 0px;
+    }
+}
