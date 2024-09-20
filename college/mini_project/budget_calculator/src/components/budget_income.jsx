@@ -59,7 +59,7 @@ const Budget_income = () => {
               </select>
               <span className="help">
                 &#x2753;
-                <div className="help-cont bg-red-100 lg:text-lg 3xl:text-xl">
+                <div className="help-cont bg-red-100 w-full lg:text-lg 3xl:text-xl">
                   "If other payment period, convert to monthly and input to
                   income box below. leave this blank"
                 </div>
@@ -82,7 +82,7 @@ const Budget_income = () => {
             />
             <span className="help">
               &#x2753;
-              <span className="help-cont bg-red-100">
+              <span className="help-cont bg-red-100 w-full">
                 "Your after-tax income is the amount in your paycheck after
                 taxes and other deductions are taken out. If you save for
                 retirement by having money deducted from your paycheck, you can
