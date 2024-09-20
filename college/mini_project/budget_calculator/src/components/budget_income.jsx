@@ -34,7 +34,7 @@ const Budget_income = () => {
 
   return (
     <>
-      <section className="font-serif lg:text-lg">
+      <section className="relative font-serif lg:text-lg">
         <div className="mb-3">
           <h2 className="text-orange-600 text-lg lg:text-2xl font-semibold ">
             Enter your income to get your

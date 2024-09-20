@@ -45,7 +45,7 @@ const Budget_input = (props) => {
   const [vacation, Setvacation] = useState(0);
   const [othersavings, Setothersavings] = useState(0);
 
-  const calc_savings = fund + retirement + vacation + othersavings ;
+  const calc_savings = fund + retirement + vacation + othersavings;
   const savings_total = calc_savings;
 
   return (
@@ -73,224 +73,224 @@ const Budget_input = (props) => {
           <section className="flex flex-col">
             <section className="flex justify-around items-center p-1 border-black border-b mb-5">
               {/* Needs */}
-              <h2>Needs</h2>
+              <h2 className="font-bold">Needs</h2>
               <img src={house} className="h-8 mb-2" />
             </section>
             {/* Needs Inputs */}
             {/* <div className="flex justify-center"> */}
-              <div className="flex flex-col items-center">
-                <section className="p-2 w-fit">
-                  {/* label-1 */}
-                  <div className=" xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
-                    <div className="">
-                      <input
-                        type="text"
-                        disabled
-                        value="Housing"
-                        className="w-full xsm:text-sm disabled:text-gray-700 bg-slate-300 text-center xsm:text-left"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <img src={rupeesmall} className="h-8 w-8" />
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        className="w-16 rounded-md p-1 no-arrows"
-                        onChange={(e) => {
-                          const item1 = Number(e.target.value);
-                          Sethousing(item1);
-                        }}
-                      />
-                    </div>
+            <div className="flex flex-col items-center ">
+              <section className="p-2 w-fit">
+                {/* label-1 */}
+                <div className="flex flex-col xsm:flex-row  gap-2 items-center"/* " xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center " */>
+                  <div className="flex xsm:basis-28 flex-shrink flex-grow">
+                    <input
+                      type="text"
+                      disabled
+                      value="Housing"
+                      className="w-full xsm:text-sm disabled:text-gray-700 bg-slate-300 text-center xsm:text-left"
+                    />
                   </div>
-                </section>
-                <section className="p-2 w-fit">
-                  {/* label-2 */}
-                  <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
-                    <div className="">
-                      <input
-                        type="text"
-                        disabled
-                        value="Utilities"
-                        className="w-full xsm:text-sm disabled:text-gray-700 bg-slate-300 text-center xsm:text-left"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <img src={rupeesmall} className="h-8 w-8" />
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        className="w-16 rounded-md p-1 no-arrows"
-                        onChange={(e) => {
-                          const item2 = Number(e.target.value);
-                          Setutility(item2);
-                        }}
-                      />
-                    </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-[65%] xsm:w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item1 = Number(e.target.value);
+                        Sethousing(item1);
+                      }}
+                    />
                   </div>
-                </section>
-                <section className="p-2 w-fit">
-                  {" "}
-                  {/* label-3 */}
-                  <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
-                    <div className="">
-                      <input
-                        type="text"
-                        disabled
-                        value="Groceries"
-                        className=" xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <img src={rupeesmall} className="h-8 w-8" />
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        className="w-16 rounded-md p-1 no-arrows"
-                        onChange={(e) => {
-                          const item3 = Number(e.target.value);
-                          Setgrocery(item3);
-                        }}
-                      />
-                    </div>
+                </div>
+              </section>
+              <section className="p-2 w-fit">
+                {/* label-2 */}
+                <div className="xsm:flex-row flex flex-col flex-grow grid-cols-2 gap-2 items-center">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Utilities"
+                      className="w-full xsm:text-sm disabled:text-gray-700 bg-slate-300 text-center xsm:text-left"
+                    />
                   </div>
-                </section>
-                <section className="p-2 w-fit">
-                  {" "}
-                  {/* label-4 */}
-                  <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
-                    <div className="">
-                      <input
-                        type="text"
-                        disabled
-                        value="Transportation"
-                        className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <img src={rupeesmall} className="h-8 w-8" />
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        className="w-16 rounded-md p-1 no-arrows"
-                        onChange={(e) => {
-                          const item4 = Number(e.target.value);
-                          Settransport(item4);
-                        }}
-                      />
-                    </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item2 = Number(e.target.value);
+                        Setutility(item2);
+                      }}
+                    />
                   </div>
-                </section>
-                <section className="p-2 w-fit">
-                  {" "}
-                  {/* label-5 */}
-                  <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
-                    <div className="">
-                      <input
-                        type="text"
-                        disabled
-                        value="Childcare"
-                        className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <img src={rupeesmall} className="h-8 w-8" />
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        className="w-16 rounded-md p-1 no-arrows"
-                        onChange={(e) => {
-                          const item5 = Number(e.target.value);
-                          Setchildcare(item5);
-                        }}
-                      />
-                    </div>
+                </div>
+              </section>
+              <section className="p-2 w-fit">
+                {" "}
+                {/* label-3 */}
+                <div className="xsm:flex-row flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Groceries"
+                      className=" xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
+                    />
                   </div>
-                </section>
-                <section className="p-2 w-fit">
-                  {/* label-6 */}
-                  <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
-                    <div className="">
-                      <input
-                        type="text"
-                        disabled
-                        value="Healthcare"
-                        className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <img src={rupeesmall} className="h-8 w-8" />
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        className="w-16 rounded-md p-1 no-arrows"
-                        onChange={(e) => {
-                          const item6 = Number(e.target.value);
-                          Sethealthcare(item6);
-                        }}
-                      />
-                    </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item3 = Number(e.target.value);
+                        Setgrocery(item3);
+                      }}
+                    />
                   </div>
-                </section>
-                <section className="p-2 w-fit">
-                  {/* label-7 */}
-                  <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
-                    <div className="">
-                      <input
-                        type="text"
-                        disabled
-                        value="Loan Payments"
-                        className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <img src={rupeesmall} className="h-8 w-8" />
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        className="w-16 rounded-md p-1 no-arrows"
-                        onChange={(e) => {
-                          const item7 = Number(e.target.value);
-                          Setstudentloan(item7);
-                        }}
-                      />
-                    </div>
+                </div>
+              </section>
+              <section className="p-2 w-fit">
+                {" "}
+                {/* label-4 */}
+                <div className="xsm:flex-row flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Transportation"
+                      className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
+                    />
                   </div>
-                </section>
-                <section className="p-2 w-fit">
-                  {/* label-8 */}
-                  <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
-                    <div className="h-full w-full">
-                      <input
-                        type="text"
-                        disabled
-                        value="Other Debts"
-                        className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
-                      />
-                    </div>
-                    <div className="flex items-center">
-                      <img src={rupeesmall} className="h-8 w-8" />
-                      <input
-                        type="number"
-                        name=""
-                        id=""
-                        className="w-16 rounded-md p-1 no-arrows"
-                        onChange={(e) => {
-                          const item8 = Number(e.target.value);
-                          Setotherdebt(item8);
-                        }}
-                      />
-                    </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item4 = Number(e.target.value);
+                        Settransport(item4);
+                      }}
+                    />
                   </div>
-                </section>
-              </div>
+                </div>
+              </section>
+              <section className="p-2 w-fit">
+                {" "}
+                {/* label-5 */}
+                <div className="xsm:flex-row flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Childcare"
+                      className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item5 = Number(e.target.value);
+                        Setchildcare(item5);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+              <section className="p-2 w-fit">
+                {/* label-6 */}
+                <div className="xsm:flex-row flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Healthcare"
+                      className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item6 = Number(e.target.value);
+                        Sethealthcare(item6);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+              <section className="p-2 w-fit">
+                {/* label-7 */}
+                <div className="xsm:flex-row flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Loan Payments"
+                      className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item7 = Number(e.target.value);
+                        Setstudentloan(item7);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+              <section className="p-2 w-fit">
+                {/* label-8 */}
+                <div className="xsm:flex-row flex flex-col flex-grow grid-cols-2 gap-2 items-center ">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Other Debts"
+                      className="xsm:text-sm disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item8 = Number(e.target.value);
+                        Setotherdebt(item8);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+            </div>
             {/* </div> */}
           </section>
 
@@ -298,146 +298,146 @@ const Budget_input = (props) => {
           <section className="flex flex-col">
             <div className="flex justify-center">
               <section className="flex justify-around items-center p-1 border-b border-black mb-5 w-[100%]">
-                <h2>Wants</h2>
+                <h2 className="font-bold">Wants</h2>
                 <img src={giftbox} className="h-8 mb-2" />
               </section>
             </div>
             {/* <div className="flex justify-center text-base"> */}
-              {/* Labels wrapper */}
-              <div className="flex flex-col items-center">
-                {/* <div className="flex flex-col items-center w-[100%] xmd:w-[375px] md:w-[100%] lg:w-[100%]"> */}
-                  {/* Wants label-1 */}
-                  <section className="p-2 w-fit">
-                    <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
-                      <div className="">
-                        <input
-                          type="text"
-                          disabled
-                          value="Entertainment"
-                          className="text-center xsm:text-left disabled:text-gray-700 bg-slate-300 w-full"
-                        />
-                      </div>
-                      <div className="flex items-center">
-                        <img src={rupeesmall} className="h-8 w-8" />
-                        <input
-                          type="number"
-                          name=""
-                          id=""
-                          className="w-16 rounded-md p-1 no-arrows"
-                          onChange={(e) => {
-                            const item1 = Number(e.target.value);
-                            Setentertainment(item1);
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </section>
-                  {/* Wants label-2 */}
-                  <section className="p-2 w-fit">
-                    <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
-                      <div className="">
-                        <input
-                          type="text"
-                          disabled
-                          value="Dining Out"
-                          className="text-center xsm:text-left disabled:text-gray-700 bg-slate-300 w-full"
-                        />
-                      </div>
-                      <div className="flex items-center">
-                        <img src={rupeesmall} className="h-8 w-8" />
-                        <input
-                          type="number"
-                          name=""
-                          id=""
-                          className="w-16 rounded-md p-1 no-arrows"
-                          onChange={(e) => {
-                            const item2 = Number(e.target.value);
-                            Setdiningout(item2);
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </section>
-                  {/* Wants label-3 */}
-                  <section className="p-2 w-fit">
-                    <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
-                      <div className="">
-                        <input
-                          type="text"
-                          disabled
-                          value="Hobbies"
-                          className="text-center xsm:text-left disabled:text-gray-700 bg-slate-300 w-full"
-                        />
-                      </div>
-                      <div className="flex items-center">
-                        <img src={rupeesmall} className="h-8 w-8" />
-                        <input
-                          type="number"
-                          name=""
-                          id=""
-                          className="w-16 rounded-md p-1 no-arrows"
-                          onChange={(e) => {
-                            const item3 = Number(e.target.value);
-                            Sethobbies(item3);
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </section>
-                  {/* Wants label-4 */}
-                  <section className="p-2 w-fit">
-                    <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
-                      <div className="">
-                        <input
-                          type="text"
-                          disabled
-                          value="Splurges"
-                          className="text-center xsm:text-left  disabled:text-gray-700 bg-slate-300 w-full"
-                        />
-                      </div>
-                      <div className="flex items-center">
-                        <img src={rupeesmall} className="h-8 w-8" />
-                        <input
-                          type="number"
-                          name=""
-                          id=""
-                          className="w-16 rounded-md p-1 no-arrows"
-                          onChange={(e) => {
-                            const item4 = Number(e.target.value);
-                            Setsplurges(item4);
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </section>
-                  {/* Wants label-5 */}
-                  <section className="p-2 w-fit">
-                    <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
-                      <div className="">
-                        <input
-                          type="text"
-                          disabled
-                          value="Other Debts"
-                          className="text-center xsm:text-left  disabled:text-gray-700 bg-slate-300 w-full"
-                        />
-                      </div>
-                      <div className="flex items-center">
-                        <img src={rupeesmall} className="h-8 w-8" />
-                        <input
-                          type="number"
-                          name=""
-                          id=""
-                          className="w-16 rounded-md p-1 no-arrows"
-                          onChange={(e) => {
-                            const item5 = Number(e.target.value);
-                            Setotherwants(item5);
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </section>
-                {/* </div> */}
-              </div>
+            {/* Labels wrapper */}
+            <div className="flex flex-col items-center">
+              {/* <div className="flex flex-col items-center w-[100%] xmd:w-[375px] md:w-[100%] lg:w-[100%]"> */}
+              {/* Wants label-1 */}
+              <section className="p-2 w-fit">
+                <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Entertainment"
+                      className="text-center xsm:text-left disabled:text-gray-700 bg-slate-300 w-full"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item1 = Number(e.target.value);
+                        Setentertainment(item1);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+              {/* Wants label-2 */}
+              <section className="p-2 w-fit">
+                <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Dining Out"
+                      className="text-center xsm:text-left disabled:text-gray-700 bg-slate-300 w-full"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item2 = Number(e.target.value);
+                        Setdiningout(item2);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+              {/* Wants label-3 */}
+              <section className="p-2 w-fit">
+                <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Hobbies"
+                      className="text-center xsm:text-left disabled:text-gray-700 bg-slate-300 w-full"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item3 = Number(e.target.value);
+                        Sethobbies(item3);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+              {/* Wants label-4 */}
+              <section className="p-2 w-fit">
+                <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Splurges"
+                      className="text-center xsm:text-left  disabled:text-gray-700 bg-slate-300 w-full"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item4 = Number(e.target.value);
+                        Setsplurges(item4);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+              {/* Wants label-5 */}
+              <section className="p-2 w-fit">
+                <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
+                  <div className="">
+                    <input
+                      type="text"
+                      disabled
+                      value="Other Debts"
+                      className="text-center xsm:text-left  disabled:text-gray-700 bg-slate-300 w-full"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <img src={rupeesmall} className="h-8 w-8" />
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      className="w-16 rounded-md p-1 no-arrows"
+                      onChange={(e) => {
+                        const item5 = Number(e.target.value);
+                        Setotherwants(item5);
+                      }}
+                    />
+                  </div>
+                </div>
+              </section>
+              {/* </div> */}
+            </div>
             {/* </div> */}
           </section>
 
@@ -445,7 +445,7 @@ const Budget_input = (props) => {
           <section className="flex flex-col">
             {/* Savings header*/}
             <section className="flex justify-around items-center p-1 mb-5 border-b border-black">
-              <h2>Savings</h2>
+              <h2 className="font-bold sm:text-lg xl:text-lg">Savings</h2>
               <img src={savings} className="h-8 mb-2" />
             </section>
 
@@ -453,7 +453,7 @@ const Budget_input = (props) => {
               {/* Savings label-1 */}
               <section className="p-2 w-fit">
                 <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
-                  <div className="">
+                  <div className="min-w-max">
                     <input
                       type="text"
                       disabled
@@ -462,7 +462,7 @@ const Budget_input = (props) => {
                     />
                   </div>
                   <div className="flex items-center w-fit">
-                    <img src={rupeesmall} className="h-8 w-8" />
+                    <img src={rupeesmall} className="h-6 w-6 xsm:h-8 xsm:w-8" />
                     <input
                       type="number"
                       name=""
@@ -505,7 +505,7 @@ const Budget_input = (props) => {
               {/*Savings label-3 */}
               <section className="p-2 w-fit">
                 <div className="xsm:grid flex flex-col flex-grow grid-cols-2 gap-2 items-center">
-                  <div className="">
+                  <div className="min-w-max">
                     <input
                       type="text"
                       disabled
