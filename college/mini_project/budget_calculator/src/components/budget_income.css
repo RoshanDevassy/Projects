@@ -6,10 +6,7 @@
     display:none;
     padding: 8px;
     position: absolute;
-    width:  250px;
-    left: 2%;
     right: 2%;
-    
     background-color: white;
     border-radius: 10px;
     flex-wrap: wrap;
