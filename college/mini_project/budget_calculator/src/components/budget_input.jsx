@@ -54,15 +54,15 @@ const Budget_input = (props) => {
         {/* Budget input Header */}
         <section className="budget-head flex flex-col flex-grow py-5 justify-between flex-wrap ">
           <div>
-            <h2 className="text-orange-600 text-xl lg:text-2xl mb-2 font-semibold text-center xsm:text-left">
+            <h2 className="text-orange-600 px-2 text-xs xsm:text-sm sm:text-lg md:text-xl lg:text-2xl 2xl:text-2xl 3xl:text-3xl  mb-2 font-semibold ">
               Personalize your monthly budget
             </h2>
           </div>
-          <div className="flex items-center flex-grow justify-end text-xs 3xl:text-lg">
+          <div className="flex items-center flex-grow justify-end text-[10px] sm:text-sm md:text-base 3xl:text-lg">
             <span className="hover:cursor-pointer ">Need Help?</span>
-            <span className="pl-1 pr-1 hover:cursor-default">|</span>
-            <span className="hover:cursor-pointer">
-              <img src={settings} className="h-6 w-6 inline" /> Add/Edit
+            <span className="px-1 hover:cursor-default">|</span>
+            <span className="hover:cursor-pointer flex items-center">
+              <img src={settings} className="h-4 w-4 sm:h-6 sm:w-6 inline" /> Add/Edit
             </span>
           </div>
         </section>
@@ -560,7 +560,7 @@ const Budget_input = (props) => {
         {/* Button */}
         <section className="flex justify-center items-center p-5 border-b border-black">
           <button
-            className="bg-slate-500 rounded-full text-white px-4 py-1 xsm:px-8 xsm:py-3 hover:bg-slate-600"
+            className="bg-slate-500 rounded-md sm:rounded-full text-white text-xs xsm:text-sm sm:text-base md:text-lg px-3 py-1 xsm:px-3 xsm:py-2 sm:px-4 md:px-8 md:py-3 hover:bg-slate-600"
             id="button"
             onClick={() => Setres(true)}
           >
