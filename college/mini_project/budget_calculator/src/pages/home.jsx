@@ -39,7 +39,7 @@ const Home = () => {
               </div>
               <div className="flex flex-col gap-1 p-1 text-md 2xl:text-xl">
                 <h1 className="text-orange-600 text-lg inline-flex items-center">
-                  <img src={giftbox} className="inline h-7 mb-2" />
+                  <img src={giftbox} className="inline h-8 mb-2" />
                   <span className="pl-2 font-semibold"><span className="font-sans">30%</span> Wants</span>
                 </h1>
                 <p className="mb-1">Things you can cut back on or do without.</p>

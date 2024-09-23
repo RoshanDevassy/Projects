@@ -9,7 +9,7 @@ const Navbar = () => {
             <li className="hover:cursor-pointer">
               <Link
                 to="/home"
-                className="font-bold text-lg md:text-xl xl:text-2xl 2xl:text-[28px] 3xl:text-5xl"
+                className="font-bold text-xs xsm:text-sm sm:text-base md:text-xl xl:text-2xl 2xl:text-[26px] 3xl:text-3xl"
               >
                 Home
               </Link>
@@ -17,7 +17,7 @@ const Navbar = () => {
             <li className="hover:cursor-pointer">
               <Link
                 to="/about"
-                className="font-bold text-lg md:text-xl xl:text-2xl xl:px-3 2xl:text-[28px] 2xl:px-5 3xl:text-5xl"
+                className="font-bold px-1 2xl:px-[6px] text-xs xsm:text-sm sm:text-base md:text-xl xl:text-2xl 2xl:text-[26px] 3xl:text-3xl"
               >
                 About
               </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
             <li className="hover:cursor-pointer">
               <Link
                 to="/app"
-                className="font-bold text-lg md:text-xl xl:text-2xl 2xl:text-[28px] 3xl:text-5xl"
+                className="font-bold text-xs xsm:text-sm sm:text-base md:text-xl xl:text-2xl 2xl:text-[26px] 3xl:text-3xl"
               >
                 App
               </Link>
