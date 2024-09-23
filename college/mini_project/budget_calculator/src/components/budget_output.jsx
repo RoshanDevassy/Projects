@@ -63,7 +63,7 @@ const Budget_output = (props) => {
               Values are based on a monthly budget
             </p>
           </div>
-          <div className="flex flex-col gap-3 flex-wrap text-justify">
+          <div className="flex flex-col gap-3 flex-wrap text-justify p-2">
             <p>Congratulations, you're off to a great start!</p>
             <p>
               Your <span className="font-sans">50/30/20</span> budget is a
