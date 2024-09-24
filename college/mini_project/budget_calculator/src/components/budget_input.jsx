@@ -50,11 +50,11 @@ const Budget_input = (props) => {
 
   return (
     <>
-      <section className="font-serif text-sm">
+      <section className="font-serif">
         {/* Budget input Header */}
-        <section className="budget-head flex flex-col flex-grow py-5 justify-between flex-wrap ">
+        <section className="budget-head flex flex-col flex-grow py-2 xsm:py-3 sm:py-5 justify-between flex-wrap ">
           <div>
-            <h2 className="text-orange-600 px-2 text-xs xsm:text-sm sm:text-lg md:text-xl lg:text-2xl 2xl:text-2xl 3xl:text-3xl  mb-2 font-semibold ">
+            <h2 className="text-orange-600 px-1 text-xs xsm:text-sm sm:text-lg md:text-xl lg:text-2xl 2xl:text-2xl 3xl:text-3xl  mb-2 font-semibold ">
               Personalize your monthly budget
             </h2>
           </div>
@@ -73,8 +73,8 @@ const Budget_input = (props) => {
           <section className="flex flex-col">
             <section className="flex justify-around items-center p-1 border-black border-b mb-5">
               {/* Needs */}
-              <h2 className="font-bold sm:text-lg xl:text-lg">Needs</h2>
-              <img src={house} className="h-6 w-6 xsm:h-8 xsm:w-8 mb-2" />
+              <h2 className="font-bold text-xs xsm:text-sm sm:text-lg xl:text-lg">Needs</h2>
+              <img src={house} className="h-4 w-4 xsm:h-6 xsm:w-6 sm:h-8 sm:w-8 mb-2" />
             </section>
             {/* Needs Inputs */}
             {/* <div className="flex justify-center"> */}
@@ -87,16 +87,16 @@ const Budget_input = (props) => {
                       type="text"
                       disabled
                       value="Housing"
-                      className="sm:text-base xl:text-lg disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left font-serif"/* "w-full xsm:text-sm disabled:text-gray-700 bg-slate-300 text-center xsm:text-left" */
+                      className="text-xs sm:text-base xl:text-lg disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left font-serif"/* "w-full xsm:text-sm disabled:text-gray-700 bg-slate-300 text-center xsm:text-left" */
                     />
                   </div>
-                  <div className="flex items-center">
-                    <img src={rupeesmall} className="h-6 w-6 xsm:h-8 xsm:w-8" />
+                  <div className="flex items-center flex-grow justify-center">
+                    <img src={rupeesmall} className="h-4 w-4 xsm:h-6 xsm:w-6 sm:h-8 sm:w-8" />
                     <input
                       type="number"
                       name=""
                       id=""
-                      className="sm:text-base xl:text-lg w-[70%] xsm:w-16 h-6 xsm:h-8 rounded-md p-1 no-arrows font-sans"
+                      className="text-xs sm:text-base xl:text-lg w-[50%] xsm:w-16 h-4 xsm:h-8 rounded-md p-1 no-arrows font-sans text-center"
                       onChange={(e) => {
                         const item1 = Number(e.target.value);
                         Sethousing(item1);
@@ -113,7 +113,7 @@ const Budget_input = (props) => {
                       type="text"
                       disabled
                       value="Utilities"
-                      className="sm:text-base xl:text-lg disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left font-serif"/* "w-full xsm:text-sm disabled:text-gray-700 bg-slate-300 text-center xsm:text-left" */
+                      className="text-xs sm:text-base xl:text-lg disabled:text-gray-700 bg-slate-300 w-full text-center xsm:text-left font-serif"/* "w-full xsm:text-sm disabled:text-gray-700 bg-slate-300 text-center xsm:text-left" */
                     />
                   </div>
                   <div className="flex items-center">

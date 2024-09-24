@@ -34,21 +34,21 @@ const Budget_income = () => {
 
   return (
     <>
-      <section className="relative font-serif lg:text-lg">
-        <div className="mb-3 text-xs xsm:text-sm sm:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl">
+      <section className="relative font-serif ">
+        <div className="mb-1 xsm:mb-2 sm:mb-3 text-xs xsm:text-sm sm:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl">
           <h2 className="text-orange-600 font-semibold p-1">
             Enter your income to get your
             <span className="font-sans"> 50/30/20</span> budget
           </h2>
         </div>
-        <div className="flex flex-col gap-5 px-2 3xl:px-5">
+        <div className="flex flex-col gap-1 xsm:gap-3 sm:gap-5 px-2 3xl:px-5">
           <label className="text-center xsm:text-left text-xs xsm:text-sm sm:text-base md:text-lg 2xl:text-xl 3xl:text-2xl">
             How often do you receive your income?
           </label>
-          <div className="3xl:flex justify-center">
+          <div className="3xl:flex justify-center mb-1">
             <div className="flex items-center gap-2 3xl:w-[75%]">
               <select
-                className="sm:h-8 md:h-9 lg:h-10 flex-grow flex-shrink rounded-lg p-1 text-ellipsis text-xs xsm:text-sm sm:text-base md:text-lg"
+                className=" text-center sm:text-left sm:pl-3 h-5 xsm:h-7 sm:h-8 md:h-9 lg:h-10 flex-grow flex-shrink rounded-lg p-0 text-ellipsis text-xs xsm:text-sm sm:text-base md:text-lg"
                 id="timely-income"
                 onChange={(e) => Settimely_income(e.target.value)}
               >
@@ -61,7 +61,7 @@ const Budget_income = () => {
               </select>
               <span className="help">
                 &#x2753;
-                <div className="help-cont lg:text-lg 3xl:text-xl bg-red-100 w-full xsm:w-[90%] sm:w-[70%] md:w-[60%] ">
+                <div className="help-cont text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl bg-red-100 w-full xsm:w-[90%] sm:w-[70%] md:w-[60%] ">
                   "If other payment period, convert to monthly and input to
                   income box below. leave this blank or can select monthly."
                 </div>
@@ -82,11 +82,11 @@ const Budget_income = () => {
                   const income_int = e.target.value;
                   setIncome(Number(income_int));
                 }}
-                className="h-6 xsm:h-7 sm:h-8 md:h-9 lg:h-10 w-full min-w-16 rounded-lg p-1 text-xs xsm:text-sm sm:text-base md:text-lg font-sans no-arrows text-ellipsis"
+                className="h-5 xsm:h-7 sm:h-8 md:h-9 lg:h-10 w-full min-w-16 rounded-lg p-1 text-xs xsm:text-sm sm:text-base md:text-lg font-sans no-arrows text-ellipsis pl-1 sm:pl-3"
               />
               <span className="help">
                 &#x2753;
-                <span className="help-cont lg:text-lg 3xl:text-xl bg-red-100 w-full xsm:w-[90%] sm:w-[70%] md:w-[60%] h-14 xsm:h-32 overflow-y-auto ">
+                <span className="help-cont text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl bg-red-100 w-full xsm:w-[90%] sm:w-[70%] md:w-[60%] h-14 xsm:h-32 overflow-y-auto ">
                   "Your after-tax income is the amount in your paycheck after
                   taxes and other deductions are taken out. If you save for
                   retirement by having money deducted from your paycheck, you
