@@ -68,9 +68,9 @@ const Budget_input = (props) => {
         </section>
 
         {/* Budget input Data */}
-        <section className="md:grid md:grid-cols-3 flex flex-col gap-5">
+        <section className="md:grid md:grid-cols-3 flex flex-col xmd:flex-row flex-wrap gap-1 xsm:gap-2  sm:gap-5">
           {/* column-1 Needs */}
-          <section className="flex flex-col">
+          <section className="flex flex-col flex-grow">
             <section className="flex justify-around items-center p-1 border-black border-b xsm:mb-2 sm:mb-3 md:mb-5 w-[100%]">
               {/* Needs */}
               <h2 className="font-bold text-xs xsm:text-sm sm:text-lg xl:text-lg">Needs</h2>
@@ -294,7 +294,7 @@ const Budget_input = (props) => {
           </section>
 
           {/* Column-2 Wants */}
-          <section className="flex flex-col">
+          <section className="flex flex-col flex-grow">
             <div className="flex justify-center">
               <section className="flex justify-around items-center p-1 border-b border-black xsm:mb-2 sm:mb-3 md:mb-5 w-[100%]">
                 <h2 className="font-bold text-xs xsm:text-sm sm:text-lg xl:text-lg">Wants</h2>
@@ -441,11 +441,11 @@ const Budget_input = (props) => {
           </section>
 
           {/* Column-3  Savings*/}
-          <section className="flex flex-col">
+          <section className="flex flex-col flex-grow">
             {/* Savings header*/}
             <section className="flex justify-around items-center p-1 xsm:mb-2 sm:mb-3 md:mb-5 border-b border-black">
               <h2 className="font-bold text-xs xsm:text-sm sm:text-lg xl:text-lg">Savings</h2>
-              <img src={savings} className="h-4 w-4 xsm:h-5 xsm:w-5 sm:h-8 sm:w-8" />
+              <img src={savings} className="h-4 w-4 xsm:h-5 xsm:w-5 sm:h-7 sm:w-7" />
             </section>
 
             <div className="flex flex-col items-center">
