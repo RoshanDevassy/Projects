@@ -34,7 +34,7 @@ const Budget_income = () => {
 
   return (
     <>
-      <section className="relative font-serif ">
+      <section className="relative font-serif">
         <div className="mb-1 xsm:mb-2 sm:mb-3 text-xs xsm:text-sm sm:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl">
           <h2 className="text-orange-600 font-semibold p-1">
             Enter your income to get your
@@ -61,7 +61,7 @@ const Budget_income = () => {
               </select>
               <span className="help">
                 &#x2753;
-                <div className="help-cont text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl bg-red-100 w-full xsm:w-[90%] sm:w-[70%] md:w-[60%] ">
+                <div className="help-cont text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl bg-red-100 w-full xsm:w-[90%] sm:w-[70%] md:w-[60%] z-10">
                   "If other payment period, convert to monthly and input to
                   income box below. leave this blank or can select monthly."
                 </div>
@@ -86,7 +86,7 @@ const Budget_income = () => {
               />
               <span className="help">
                 &#x2753;
-                <span className="help-cont text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl bg-red-100 w-full xsm:w-[90%] sm:w-[70%] md:w-[60%] h-14 xsm:h-32 overflow-y-auto ">
+                <span className="help-cont text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl bg-red-100 w-full xsm:w-[90%] sm:w-[70%] md:w-[60%] h-14 xsm:h-32 overflow-y-auto z-10">
                   "Your after-tax income is the amount in your paycheck after
                   taxes and other deductions are taken out. If you save for
                   retirement by having money deducted from your paycheck, you
@@ -97,13 +97,15 @@ const Budget_income = () => {
             </div>
           </div>
         </div>
+        <section>
+          <Budget_input
+            monthly_income={monthly_income}
+            fifty={fifty}
+            thirty={thirty}
+            twenty={twenty}
+          />
+        </section>
       </section>
-      <Budget_input
-        monthly_income={monthly_income}
-        fifty={fifty}
-        thirty={thirty}
-        twenty={twenty}
-      />
     </>
   );
 };

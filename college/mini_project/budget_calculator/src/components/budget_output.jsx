@@ -58,7 +58,7 @@ const Budget_output = (props) => {
         </section>
         {/* Budget Output Content */}
         <section>
-          <div className="flex justify-center mt-3 xsm:mt-4  sm:mt-5 sm:mb-2">
+          <div className="flex justify-center mt-3 xsm:mt-4  sm:mt-6 md:mt-7 3xl:mt-10 sm:mb-2">
             <p className="text-slate-500 text-xs xsm:text-sm sm:text-base xl:text-lg text-center">
               Values are based on a monthly budget
             </p>
