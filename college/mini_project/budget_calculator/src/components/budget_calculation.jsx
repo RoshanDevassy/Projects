@@ -43,29 +43,29 @@ const Budget_calculation = (props) => {
       <section className="font-sans">
         {/* Piggy Picture */}
         <section>
-          <div className="p-5 w-full flex flex-col items-center">
+          <div className="py-1 sm:py-2 w-full flex flex-col items-center">
             <img
               src={piggy}
               alt="piggy bank"
-              className=" h-12 w-12 xsm:h-24 xsm:w-24 md:h-48 md:w-48"
+              className="h-7 w-7 xsm:h-10 xsm:w-10 sm:h-12 sm:w-12 lg:h-24 lg:w-24 3xl:h-40 3xl:w-40"/* "h-12 w-12 xsm:h-24 xsm:w-24 md:h-48 md:w-48" */
             />
-            <p className="text-orange-600 text-sm xsm:text-base sm:text-2xl 3xl:text-3xl font-extrabold font-serif text-center pt-2">
+            <p className="text-orange-600 text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 3xl:text-3xl font-extrabold font-serif text-center pt-2">
               Good Job!
             </p>
           </div>
-          <div>
+          <div className=" sm:px-5 md:px-10 lg:px-20">
             {Math.ceil(props.monthly_income) > Math.ceil(allocated) ? (
-              <p className="text-center font-mono text-sm xsm:text-base md:text-xl 3xl:text-2xl">
-                You have an extra{" "}
-                <span>+&#8377;{Math.ceil(remaining).toFixed(2)}</span>. Consider
+              <p className="text-center font-mono text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
+                You have an extra
+                <span>{" "}+&#8377;{Math.ceil(remaining).toFixed(2)}</span>. Consider
                 putting it toward savings or paying down any debt you have.
               </p>
             ) : Math.ceil(props.monthly_income) === Math.ceil(allocated) ? (
-              <p className="text-center font-mono text-sm xsm:text-base md:text-xl 3xl:text-2xl ">
+              <p className="text-center font-mono text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
                 Your budget is perfect
               </p>
             ) : (
-              <p className="text-center font-mono text-sm xsm:text-base md:text-xl 3xl:text-2xl">
+              <p className="text-center font-mono text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
                 You have an low{" "}
                 <span>
                   -&#8377;
@@ -85,13 +85,13 @@ const Budget_calculation = (props) => {
           {/* Monthly Budget & Income,Allocated,Remaining Wrapper */}
           <section className="">
             {/* Monthly Budget */}
-            <div className="py-3 border-b border-black pt-10">
-              <h1 className="text-sm xsm:text-base sm:text-lg md:text-xl lg:text-2xl 3xl:text-3xl text-orange-600 font-semibold font-serif pl-0 xsm:pl-2  text-center sm:text-left">
+            <div className="py-1 border-b border-black mt-3 sm:mt-5 md:mt-6 lg:mt-8 xl:mt-10">
+              <h1 className="text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 3xl:text-3xl text-orange-600 font-semibold font-serif pl-0 xsm:pl-2  text-center sm:text-left">
                 Monthly Budget
               </h1>
             </div>
             {/* Income,Allocated,Remaining */}
-            <div className="flex flex-col sm:flex-row items-center justify-evenly py-5 flex-wrap pb-6 text-sm xsm:text-base md:text-lg 3xl:text-xl font-semibold">
+            <div className=" flex gap-2 sm:flex-row items-center justify-evenly flex-wrap text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl font-semibold sm:mt-3 3xl:mt-5">
               <div className="flex flex-col items-center">
                 <h3 className="font-serif">Income</h3>
                 <p>&#8377;{Math.ceil(props.monthly_income).toFixed(2)} </p>
@@ -119,7 +119,7 @@ const Budget_calculation = (props) => {
 
           {/*Needs, Wants & Savings wrapper */}
           <div
-            className=" flex flex-col self-center flex-wrap  md:flex-row *:flex-grow gap-2 w-full sm:gap-5 lg:gap-7" /* "md:flex md:justify-around md:items-center" */
+            className=" flex flex-col self-center flex-wrap  md:flex-row *:flex-grow gap-2 w-full sm:gap-5 lg:gap-7 mt-4 xl:mt-6 2xl:mt-8 3xl:mt-10" /* "md:flex md:justify-around md:items-center" */
           >
             {/* Needs wrapper*/}
             <div className="flex flex-col border border-black rounded-md sm:self-center">

@@ -71,8 +71,8 @@ const Budget_input = (props) => {
               Add/Edit
             </span>
             {showHelpInfo && (
-              <div className="absolute top-full bg-red-500 p-2 rounded-md">
-                <p>Not Available <br></br>-On Built</p>
+              <div className="z-10 absolute bg-red-500 p-1 px-3 rounded-md h-7 flex justify-end items-center">
+                <p className="">Not Available - On Built</p>
               </div>
             )}
           </div>
