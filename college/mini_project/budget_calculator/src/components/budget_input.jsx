@@ -5,7 +5,7 @@ import savings from "../assets/savings-outlined.png";
 import rupeesmall from "../assets/rupeesmall.svg";
 import Budget_calculation from "./budget_calculation";
 import Budget_output from "./budget_output";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Budget_input = (props) => {
   const [res, Setres] = useState(false); /* For Submit Button */
@@ -60,18 +60,34 @@ const Budget_input = (props) => {
               Personalize your monthly budget
             </h2>
           </div>
-          <div
-            className="flex items-center flex-grow justify-end text-[10px] sm:text-sm md:text-base 3xl:text-lg relative "
-            onClick={() => setShowHelpInfo(!showHelpInfo)}
-          >
-            <span className="hover:cursor-pointer ">Need Help?</span>
+          <div className="flex items-center flex-grow justify-end text-[10px] sm:text-sm md:text-base 3xl:text-lg relative ">
+            <span
+              className="hover:cursor-pointer group"
+              /* onClick={() => setShowHelp(!showHelp)} */
+            >
+              Need Help?
+              <div className="absolute bg-red-100 p-1 px-3 rounded-md justify-end items-center top-6 left-0 sm:left-5 md:left-[50%] lg:left-[60%] 3xl:left-[70%] flex-wrap hidden group-hover:flex">
+                <div className="h-3 w-3 rounded-sm absolute bg-red-100 top-0 left-[50%] rotate-45 -translate-y-[6px] translate-x-8 "></div>
+                <p className="text-justify">
+                  Enter your Expenses according to the Input Box below. If any
+                  other kind of expenses or savings other than the labels, input
+                  the value in "Other debts or Savings". If no expenses for a label leave it blank
+                </p>
+              </div>
+            </span>
+
             <span className="px-1 hover:cursor-default">|</span>
-            <span className="hover:cursor-pointer flex items-center">
+            <span
+              className="hover:cursor-pointer flex items-center"
+              onClick={() => setShowHelpInfo(!showHelpInfo)}
+            >
               <img src={settings} className="h-4 w-4 sm:h-6 sm:w-6 inline" />{" "}
               Add/Edit
             </span>
+
             {showHelpInfo && (
-              <div className="z-10 absolute bg-red-500 p-1 px-3 rounded-md h-7 flex justify-end items-center">
+              <div className="z-10 absolute bg-red-500 p-1 px-3 rounded-md h-7 flex justify-end items-center top-6">
+                <div className="h-2 w-2 absolute right-0 top-0 bg-red-500 rotate-45 -translate-y-[3px] -translate-x-7 rounded-sm"></div>
                 <p className="">Not Available - On Built</p>
               </div>
             )}
