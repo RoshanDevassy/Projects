@@ -119,10 +119,10 @@ const Budget_calculation = (props) => {
 
           {/*Needs, Wants & Savings wrapper */}
           <div
-            className="flex  self-center flex-wrap  md:flex-row justify-evenly gap-2 w-full sm:gap-5 lg:gap-7 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10 mb-3 xsm:mb-4 sm:mb-5 xl:mb-6 2xl:mb-8"/* " flex flex-col self-center flex-wrap  md:flex-row *:flex-grow gap-2 w-full sm:gap-5 lg:gap-7 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10" */ /* "md:flex md:justify-around md:items-center" */
+            className="flex  self-center flex-wrap  md:flex-row justify-evenly gap-2 w-full sm:gap-5 lg:gap-7 3xl:px-20 3xl:gap-20 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10 mb-3 xsm:mb-4 sm:mb-5 xl:mb-6 2xl:mb-8 px-5"/* " flex flex-col self-center flex-wrap  md:flex-row *:flex-grow gap-2 w-full sm:gap-5 lg:gap-7 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10" */ /* "md:flex md:justify-around md:items-center" */
           >
             {/* Needs wrapper*/}
-            <div className="flex flex-col border border-black rounded-md sm:self-center">
+            <div className="flex flex-col border border-black rounded-md sm:self-center xl:flex-grow">
               <section
                 className="flex mb-2 gap-3 p-1 items-center justify-center rounded-md border-black border-x-8 border-b text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl" /* "grid grid-cols-2 row-span-2 justify-self-center items-center gap-1 mb-1" */ /* "flex gap-3 items-center pb-2" */
               >
@@ -159,7 +159,7 @@ const Budget_calculation = (props) => {
               </section>
             </div>
             {/* Wants Wrapper*/}
-            <div className="flex flex-col border border-black rounded-md sm:self-center">
+            <div className="flex flex-col border border-black rounded-md sm:self-center xl:flex-grow">
               <section className="flex mb-2 gap-3 p-1 items-center justify-center border-b border-black border-x-8 rounded-md text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
                 <img
                   src={giftbox}
@@ -188,7 +188,7 @@ const Budget_calculation = (props) => {
               </section>
             </div>
             {/* Savings Wrapper*/}
-            <div className="flex flex-col border border-black rounded-md ">
+            <div className="flex flex-col border border-black rounded-md xl:flex-grow">
               <section className="flex mb-2 gap-3 p-1 items-center justify-center border-b border-black border-x-8 rounded-md text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl"/* "flex gap-3 p-1 items-center justify-center mb-2 border-black border-b border-x-8 rounded-md" */>
                 <img
                   src={savings}
