@@ -119,7 +119,7 @@ const Budget_calculation = (props) => {
 
           {/*Needs, Wants & Savings wrapper */}
           <div
-            className="flex  self-center flex-wrap  md:flex-row justify-evenly gap-2 w-full sm:gap-5 lg:gap-7 3xl:px-20 3xl:gap-20 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10 mb-3 xsm:mb-4 sm:mb-5 xl:mb-6 2xl:mb-8 px-5"/* " flex flex-col self-center flex-wrap  md:flex-row *:flex-grow gap-2 w-full sm:gap-5 lg:gap-7 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10" */ /* "md:flex md:justify-around md:items-center" */
+            className="flex  self-center flex-wrap  md:flex-row justify-evenly gap-2 w-full sm:gap-5 lg:gap-7  3xl:px-20 3xl:gap-20 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10 mb-3 xsm:mb-4 sm:mb-5 xl:mb-6 2xl:mb-8 px-5"/* " flex flex-col self-center flex-wrap  md:flex-row *:flex-grow gap-2 w-full sm:gap-5 lg:gap-7 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10" */ /* "md:flex md:justify-around md:items-center" */
           >
             {/* Needs wrapper*/}
             <div className="flex flex-col border border-black rounded-md sm:self-center xl:flex-grow">
