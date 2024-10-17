@@ -2,7 +2,7 @@ const About = () => {
   return (
     <>
       <div className=" sm:h-full md:h-screen min-w-[185px] bg-slate-200 p-4 bg-no-repeat bg-contain bg-center bg-blend-lighten">
-        <div className="h-full flex items-center">
+        <div className="h-full flex">
           <section className="mt-5 text-justify">
             <h1 className="text-xl font-bold">
               About Monthly Budget Calculator

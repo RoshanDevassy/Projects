@@ -62,7 +62,7 @@ const Budget_input = (props) => {
           </div>
           <div className="flex items-center flex-grow justify-end text-[10px] sm:text-sm md:text-base 3xl:text-lg relative ">
             <span
-              className="hover:cursor-pointer group"
+              className="hover:cursor-pointer group px-5"
               /* onClick={() => setShowHelp(!showHelp)} */
             >
               Need Help?
@@ -76,7 +76,7 @@ const Budget_input = (props) => {
               </div>
             </span>
 
-            <span className="px-1 hover:cursor-default">|</span>
+            {/* <span className="px-1 hover:cursor-default">|</span>
             <span
               className="hover:cursor-pointer flex items-center"
               onClick={() => setShowHelpInfo(!showHelpInfo)}
@@ -90,7 +90,7 @@ const Budget_input = (props) => {
                 <div className="h-2 w-2 absolute right-0 top-0 bg-red-500 rotate-45 -translate-y-[3px] -translate-x-7 rounded-sm"></div>
                 <p className="">Not Available - On Built</p>
               </div>
-            )}
+            )} */}
           </div>
         </section>
 

@@ -13,25 +13,36 @@ const Home = () => {
           </h2>
         </div>
         <div>
-          <h1 className=" text-xl md:text-2xl 2xl:text-3xl font-semibold mb-5">Budget Calculator</h1>
+          <h1 className=" text-xl md:text-2xl 2xl:text-3xl font-semibold mb-5">
+            Budget Calculator
+          </h1>
           <div className="bg-white rounded-md p-2 2xl:p-10">
             <p className=" text-orange-600 mb-5 text-lg font-black tracking-wider lg:text-xl 2xl:text-2xl">
-              Get your <span className="font-sans italic">50/30/20</span> budget and then personalize it to your
-              priorities and situation
+              Get your <span className="font-sans italic">50/30/20</span> budget
+              and then personalize it to your priorities and situation
             </p>
             <p className="text-lg 2xl:text-xl text-justify ">
-              The <b className="font-sans italic">50/30/20</b> approach can be a helpful way to get started
-              with budgeting. It’s a simple rule of thumb that suggests you put
-              up to <span className="font-sans">50%</span> of your after-tax income toward things you need, <span className="font-sans">30%</span>
-              toward things you want, and <span className="font-sans">20%</span> toward savings.
+              The <b className="font-sans italic">50/30/20</b> approach can be a
+              helpful way to get started with budgeting. It’s a simple rule of
+              thumb that suggests you put up to{" "}
+              <span className="font-sans">50%</span> of your after-tax income
+              toward things you need, <span className="font-sans">30%</span>
+              toward things you want, and <span className="font-sans">
+                20%
+              </span>{" "}
+              toward savings.
             </p>
             <div className="flex flex-col gap-2 md:grid md:grid-cols-3  font-serif mt-5">
               <div className="flex flex-col gap-1 p-1 text-md 2xl:text-xl">
                 <h1 className="text-orange-600 text-lg inline-flex items-center">
                   <img src={home} className="inline h-8 mb-2" />
-                  <span className="pl-2 font-semibold"><span className="font-sans">50%</span> Needs</span>
+                  <span className="pl-2 font-semibold">
+                    <span className="font-sans">50%</span> Needs
+                  </span>
                 </h1>
-                <p className="mb-1">Things you must have or can't live without.</p>
+                <p className="mb-1">
+                  Things you must have or can't live without.
+                </p>
                 <p>
                   Examples: housing, groceries, utilities, transportation,
                   childcare, debt payments
@@ -40,15 +51,21 @@ const Home = () => {
               <div className="flex flex-col gap-1 p-1 text-md 2xl:text-xl">
                 <h1 className="text-orange-600 text-lg inline-flex items-center">
                   <img src={giftbox} className="inline h-8 mb-2" />
-                  <span className="pl-2 font-semibold"><span className="font-sans">30%</span> Wants</span>
+                  <span className="pl-2 font-semibold">
+                    <span className="font-sans">30%</span> Wants
+                  </span>
                 </h1>
-                <p className="mb-1">Things you can cut back on or do without.</p>
+                <p className="mb-1">
+                  Things you can cut back on or do without.
+                </p>
                 <p>Examples: entertainment, dining out, clothing, splurges</p>
               </div>
               <div className="flex flex-col gap-1 p-1 text-md 2xl:text-xl">
                 <h1 className="text-orange-600 text-lg inline-flex items-center">
                   <img src={savings} className="inline h-8 mb-2 " />
-                  <span className="pl-2 font-semibold"><span className="font-sans">20%</span> Savings</span>
+                  <span className="pl-2 font-semibold">
+                    <span className="font-sans">20%</span> Savings
+                  </span>
                 </h1>
                 <p className="mb-1">Money you save for future goals.</p>
                 <p>
