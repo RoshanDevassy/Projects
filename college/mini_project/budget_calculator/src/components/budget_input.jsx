@@ -1,4 +1,4 @@
-import settings from "../assets/settings.svg";
+/* import settings from "../assets/settings.svg"; */
 import house from "../assets/house-outlined.png";
 import giftbox from "../assets/giftbox-monocolor.png";
 import savings from "../assets/savings-outlined.png";
@@ -48,7 +48,7 @@ const Budget_input = (props) => {
   const calc_savings = fund + retirement + vacation + othersavings;
   const savings_total = calc_savings;
 
-  const [showHelpInfo, setShowHelpInfo] = useState(false);
+  /* const [showHelpInfo, setShowHelpInfo] = useState(false); */
 
   return (
     <>
@@ -675,7 +675,7 @@ const Budget_input = (props) => {
           <button
             className="bg-slate-500 rounded-md sm:rounded-full text-white text-xs xsm:text-sm sm:text-base md:text-lg px-3 py-1 xsm:px-3 xsm:py-2 sm:px-4 md:px-8 md:py-3 hover:bg-slate-600"
             id="button"
-            onClick={() => Setres(true)}
+            onClick={() => props.income <= 0 ? alert("Please Check the income and ensure it is greater than 0 ") : calc_needs+calc_wants+calc_savings <= 0 ? alert("Enter your Expenses!!!"): needs_total <= 0 || wants_total <= 0 || savings_total <= 0 ? alert(" Please check Your Needs, Wants and Savings Total. Which should be greater than 0.") :Setres(true)}
           >
             Submit
           </button>
@@ -690,6 +690,7 @@ const Budget_input = (props) => {
           fifty={props.fifty}
           thirty={props.thirty}
           twenty={props.twenty}
+          studentloan={studentloan}
         />
       ) : (
         <Budget_output

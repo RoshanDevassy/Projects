@@ -80,7 +80,8 @@ const Budget_income = () => {
                 id="after-income"
                 onChange={(e) => {
                   const income_int = e.target.value;
-                  setIncome(Number(income_int));
+                  income_int < 0 ? alert("Please check your Income. Income should be greater than 0.") : setIncome(Number(income_int)); 
+                  
                 }}
                 className="h-5 xsm:h-7 sm:h-8 md:h-9 lg:h-10 w-full min-w-16 rounded-lg p-1 text-xs xsm:text-sm sm:text-base md:text-lg font-sans no-arrows text-ellipsis pl-1 sm:pl-3"
               />
@@ -99,6 +100,7 @@ const Budget_income = () => {
         </div>
         <section>
           <Budget_input
+          income = {income}
             monthly_income={monthly_income}
             fifty={fifty}
             thirty={thirty}

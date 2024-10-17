@@ -35,7 +35,8 @@ const Budget_calculation = (props) => {
     props.needs_total + props.wants_total + props.savings_total;
   const allocated = calc_allocated;
 
-  const calc_remaining = props.monthly_income - allocated;
+  let swap_alloc = allocated
+  const calc_remaining = props.monthly_income - (swap_alloc < 0 ? (-(allocated)) : allocated) ;
   const remaining = calc_remaining;
 
   return (
@@ -50,31 +51,33 @@ const Budget_calculation = (props) => {
               className="h-7 w-7 xsm:h-10 xsm:w-10 sm:h-12 sm:w-12 lg:h-24 lg:w-24 3xl:h-40 3xl:w-40"/* "h-12 w-12 xsm:h-24 xsm:w-24 md:h-48 md:w-48" */
             />
             <p className="text-orange-600 text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 3xl:text-3xl font-extrabold font-serif text-center pt-2">
-              Good Job!
+              {remaining > 0 ? "Good Job !": remaining < 0 ? "You are in a deficit !!!!" : "No Savings !!"}
+              
             </p>
           </div>
           <div className=" sm:px-5 md:px-10 lg:px-20">
+
             {Math.ceil(props.monthly_income) > Math.ceil(allocated) ? (
               <p className="text-center font-mono text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
                 You have an extra
-                <span>{" "}+&#8377;{Math.ceil(remaining).toFixed(2)}</span>. Consider
-                putting it toward savings or paying down any debt you have.
+                <span>{" "}+&#8377;{Math.ceil(remaining).toFixed(2)}</span>. Consider saving or {" "}
+                {props.studentloan > 0 ? "paying down any debt you have":"investing your surplus."}
               </p>
             ) : Math.ceil(props.monthly_income) === Math.ceil(allocated) ? (
               <p className="text-center font-mono text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
-                Your budget is perfect
+                Consider saving or investing any surplus in the future.
               </p>
             ) : (
               <p className="text-center font-mono text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
-                You have an low{" "}
+                Consider reducing your expenses or increasing your income{" "}
                 <span>
                   -&#8377;
                   {Math.ceil(remaining)
                     .toFixed(2)
                     .toString()
                     .replace(/\-/g, "")}
+                    .
                 </span>
-                . Reduce your Expenses on wants or Needs.
               </p>
             )}
           </div>
@@ -104,7 +107,8 @@ const Budget_calculation = (props) => {
                 <h3 className="font-serif">Remaining</h3>
                 <p>
                   {Math.ceil(props.monthly_income) > Math.ceil(allocated)
-                    ? "+\u20B9" + Math.ceil(remaining).toFixed(2)
+                    ? allocated < 0 ? "-\u20b9"+Math.ceil(remaining).toFixed(2).toString()
+                    .replace(/\-/g, ""):"+\u20B9" + Math.ceil(remaining).toFixed(2)
                     : Math.ceil(props.monthly_income) === Math.ceil(allocated)
                     ? "=\u20B9" + Math.ceil(remaining).toFixed(2)
                     : "-\u20b9" +
