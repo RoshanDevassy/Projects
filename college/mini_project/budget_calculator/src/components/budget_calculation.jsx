@@ -35,8 +35,9 @@ const Budget_calculation = (props) => {
     props.needs_total + props.wants_total + props.savings_total;
   const allocated = calc_allocated;
 
-  let swap_alloc = allocated
-  const calc_remaining = props.monthly_income - (swap_alloc < 0 ? (-(allocated)) : allocated) ;
+  let swap_alloc = allocated;
+  const calc_remaining =
+    props.monthly_income - (swap_alloc < 0 ? -allocated : allocated);
   const remaining = calc_remaining;
 
   return (
@@ -48,20 +49,25 @@ const Budget_calculation = (props) => {
             <img
               src={piggy}
               alt="piggy bank"
-              className="h-7 w-7 xsm:h-10 xsm:w-10 sm:h-12 sm:w-12 lg:h-24 lg:w-24 3xl:h-40 3xl:w-40"/* "h-12 w-12 xsm:h-24 xsm:w-24 md:h-48 md:w-48" */
+              className="h-7 w-7 xsm:h-10 xsm:w-10 sm:h-12 sm:w-12 lg:h-24 lg:w-24 3xl:h-40 3xl:w-40" /* "h-12 w-12 xsm:h-24 xsm:w-24 md:h-48 md:w-48" */
             />
             <p className="text-orange-600 text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 3xl:text-3xl font-extrabold font-serif text-center pt-2">
-              {remaining > 0 ? "Good Job !": remaining < 0 ? "You are in a deficit !!!!" : "No Savings !!"}
-              
+              {remaining > 0
+                ? "Good Job !"
+                : remaining < 0
+                ? "You are in a deficit !!!!"
+                : "No Savings !!"}
             </p>
           </div>
           <div className=" sm:px-5 md:px-10 lg:px-20">
-
             {Math.ceil(props.monthly_income) > Math.ceil(allocated) ? (
               <p className="text-center font-mono text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
                 You have an extra
-                <span>{" "}+&#8377;{Math.ceil(remaining).toFixed(2)}</span>. Consider saving or {" "}
-                {props.studentloan > 0 ? "paying down any debt you have":"investing your surplus."}
+                <span> +&#8377;{Math.ceil(remaining).toFixed(2)}</span>.
+                Consider saving or{" "}
+                {props.studentloan > 0
+                  ? "paying down any debt you have"
+                  : "investing your surplus."}
               </p>
             ) : Math.ceil(props.monthly_income) === Math.ceil(allocated) ? (
               <p className="text-center font-mono text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl">
@@ -76,7 +82,7 @@ const Budget_calculation = (props) => {
                     .toFixed(2)
                     .toString()
                     .replace(/\-/g, "")}
-                    .
+                  .
                 </span>
               </p>
             )}
@@ -107,8 +113,13 @@ const Budget_calculation = (props) => {
                 <h3 className="font-serif">Remaining</h3>
                 <p>
                   {Math.ceil(props.monthly_income) > Math.ceil(allocated)
-                    ? allocated < 0 ? "-\u20b9"+Math.ceil(remaining).toFixed(2).toString()
-                    .replace(/\-/g, ""):"+\u20B9" + Math.ceil(remaining).toFixed(2)
+                    ? allocated < 0
+                      ? "-\u20b9" +
+                        Math.ceil(remaining)
+                          .toFixed(2)
+                          .toString()
+                          .replace(/\-/g, "")
+                      : "+\u20B9" + Math.ceil(remaining).toFixed(2)
                     : Math.ceil(props.monthly_income) === Math.ceil(allocated)
                     ? "=\u20B9" + Math.ceil(remaining).toFixed(2)
                     : "-\u20b9" +
@@ -123,7 +134,7 @@ const Budget_calculation = (props) => {
 
           {/*Needs, Wants & Savings wrapper */}
           <div
-            className="flex  self-center flex-wrap  md:flex-row justify-evenly gap-2 w-full sm:gap-5 lg:gap-7  3xl:px-20 3xl:gap-20 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10 mb-3 xsm:mb-4 sm:mb-5 xl:mb-6 2xl:mb-8 px-5"/* " flex flex-col self-center flex-wrap  md:flex-row *:flex-grow gap-2 w-full sm:gap-5 lg:gap-7 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10" */ /* "md:flex md:justify-around md:items-center" */
+            className="flex  self-center flex-wrap  md:flex-row justify-evenly gap-2 w-full sm:gap-5 lg:gap-7  3xl:px-20 3xl:gap-20 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10 mb-3 xsm:mb-4 sm:mb-5 xl:mb-6 2xl:mb-8 px-5" /* " flex flex-col self-center flex-wrap  md:flex-row *:flex-grow gap-2 w-full sm:gap-5 lg:gap-7 mt-3 xsm:mt-4 sm:mt-5 xl:mt-6 2xl:mt-8 3xl:mt-10" */ /* "md:flex md:justify-around md:items-center" */
           >
             {/* Needs wrapper*/}
             <div className="flex flex-col border border-black rounded-md sm:self-center xl:flex-grow">
@@ -133,7 +144,7 @@ const Budget_calculation = (props) => {
                 <img
                   src={house}
                   alt="house"
-                  className="h-4 w-4 xsm:h-5 xsm:w-5 sm:h-7 sm:w-7"/* "h-5 w-5 xsm:h-6 xsm:w-6 sm:w-7 sm:h-7 lg:h-8 lg:w-8" */
+                  className="h-4 w-4 xsm:h-5 xsm:w-5 sm:h-7 sm:w-7" /* "h-5 w-5 xsm:h-6 xsm:w-6 sm:w-7 sm:h-7 lg:h-8 lg:w-8" */
                 />
                 <p className="font-semibold font-serif text-sm xsm:text-base sm:text-lg lg:text-xl">
                   Needs
@@ -175,7 +186,7 @@ const Budget_calculation = (props) => {
                 </p>
               </section>
               <section
-                className="flex gap-3 p-1 pb-2 sm:flex-col  flex-wrap sm:self-center text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl font-mono font-semibold md:w-full  *:flex *:flex-col *:flex-grow *:items-center *:sm:flex-row *:sm:justify-between *:sm:items-center"/* "flex flex-col gap-3 text-sm xsm:text-base lg:text-lg basis-16 flex-shrink p-1 *:flex *:flex-col *:items-center *:sm:flex-row *:sm:justify-between *:sm:items-center px-[2px] font-mono font-semibold" */ /* "flex flex-col gap-1" */ /* "grid grid-rows-3 pb-5 gap-1 " */
+                className="flex gap-3 p-1 pb-2 sm:flex-col  flex-wrap sm:self-center text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl font-mono font-semibold md:w-full  *:flex *:flex-col *:flex-grow *:items-center *:sm:flex-row *:sm:justify-between *:sm:items-center" /* "flex flex-col gap-3 text-sm xsm:text-base lg:text-lg basis-16 flex-shrink p-1 *:flex *:flex-col *:items-center *:sm:flex-row *:sm:justify-between *:sm:items-center px-[2px] font-mono font-semibold" */ /* "flex flex-col gap-1" */ /* "grid grid-rows-3 pb-5 gap-1 " */
               >
                 <div className="">
                   <p>50/30/20</p>
@@ -193,7 +204,9 @@ const Budget_calculation = (props) => {
             </div>
             {/* Savings Wrapper*/}
             <div className="flex flex-col border border-black rounded-md xl:flex-grow">
-              <section className="flex mb-2 gap-3 p-1 items-center justify-center border-b border-black border-x-8 rounded-md text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl"/* "flex gap-3 p-1 items-center justify-center mb-2 border-black border-b border-x-8 rounded-md" */>
+              <section
+                className="flex mb-2 gap-3 p-1 items-center justify-center border-b border-black border-x-8 rounded-md text-xs xsm:text-sm sm:text-base md:text-lg lg:text-xl 3xl:text-2xl" /* "flex gap-3 p-1 items-center justify-center mb-2 border-black border-b border-x-8 rounded-md" */
+              >
                 <img
                   src={savings}
                   alt="savings"
@@ -204,7 +217,7 @@ const Budget_calculation = (props) => {
                 </p>
               </section>
               <section
-                className="flex gap-3 p-1 pb-2 sm:flex-col  flex-wrap sm:self-center text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl font-mono font-semibold md:w-full  *:flex *:flex-col *:flex-grow *:items-center *:sm:flex-row *:sm:justify-between *:sm:items-center"/* "flex flex-col gap-3 text-sm xsm:text-base lg:text-lg basis-16 flex-shrink p-1 *:flex *:flex-col *:items-center *:sm:flex-row *:sm:justify-between *:sm:items-center px-[2px] font-mono font-semibold" */ /* "grid grid-rows-3 gap-2" */
+                className="flex gap-3 p-1 pb-2 sm:flex-col  flex-wrap sm:self-center text-xs xsm:text-sm sm:text-base lg:text-lg 3xl:text-xl font-mono font-semibold md:w-full  *:flex *:flex-col *:flex-grow *:items-center *:sm:flex-row *:sm:justify-between *:sm:items-center" /* "flex flex-col gap-3 text-sm xsm:text-base lg:text-lg basis-16 flex-shrink p-1 *:flex *:flex-col *:items-center *:sm:flex-row *:sm:justify-between *:sm:items-center px-[2px] font-mono font-semibold" */ /* "grid grid-rows-3 gap-2" */
               >
                 <div className="">
                   <p>50/30/20</p>
