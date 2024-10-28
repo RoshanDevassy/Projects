@@ -8,7 +8,7 @@ const Home = () => {
       <div className="h-screen bg-slate-300">
         <div className="h-full p-1 flex flex-col justify-around items-center">
           <p className="text-4xl font-semibold p-1 font-serif text-animate relative">
-            Hi, I'm <span className="font-bold xs:pl-14">Roshan</span>
+          Welcome to My Portfolio
           </p>
           <p className="text-4xl font-bold font-serif text-animate relative">
             Full-Stack Web Developer Python
